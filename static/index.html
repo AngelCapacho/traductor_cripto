@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco y Traductor Criptográfico</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1> Banco y Traductor Criptográfico</h1>
+        <p>Herramienta educativa para codificación, criptografía y análisis de patrones</p>
+        <nav>
+            <button class="nav-btn active" onclick="showTab('translator')">Traductores</button>
+            <button class="nav-btn" onclick="showTab('detector')">Detector Inteligente</button>
+            <button class="nav-btn" onclick="showTab('caesar-shifts')">25 Desplazamientos César</button>
+            <button class="nav-btn" onclick="showTab('catalog')">Catálogo Educativo</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: TRADUCTORES -->
+        <section id="translator" class="tab-content active">
+            <h2>Herramienta de Traducción y Cifrado</h2>
+            
+            <div class="control-group">
+                <label for="cipher-select">Selecciona el sistema:</label>
+                <select id="cipher-select" onchange="toggleCipherInputs()">
+                    <option value="morse">Código Morse</option>
+                    <option value="caesar">Cifrado César</option>
+                    <option value="binary">Código Binario</option>
+                    <option value="hex">Sistema Hexadecimal</option>
+                    <option value="substitution">Sustitución Simple</option>
+                </select>
+            </div>
+
+            <!-- Parametros adicionales según el cifrado -->
+            <div id="caesar-params" class="extra-params hidden">
+                <label for="caesar-shift">Desplazamiento (1-25):</label>
+                <input type="number" id="caesar-shift" value="3" min="1" max="25">
+            </div>
+
+            <div id="substitution-params" class="extra-params hidden">
+                <label for="sub-key">Alfabeto Clave (26 letras sin repetir):</label>
+                <input type="text" id="sub-key" placeholder="QWERTYUIOPASDFGHJKLZXCVBNM" maxlength="26">
+            </div>
+
+            <div class="io-container">
+                <div class="input-box">
+                    <label for="input-text">Texto de entrada:</label>
+                    <textarea id="input-text" placeholder="Escribe tu mensaje o código aquí..."></textarea>
+                    <div class="btn-group">
+                        <button onclick="processTranslation('encode')">Codificar / Cifrar</button>
+                        <button onclick="processTranslation('decode')">Decodificar / Descifrar</button>
+                    </div>
+                </div>
+
+                <div class="output-box">
+                    <label for="output-text">Resultado:</label>
+                    <textarea id="output-text" readonly placeholder="El resultado aparecerá aquí..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: DETECTOR INTELIGENTE -->
+        <section id="detector" class="tab-content">
+            <h2>Detector Inteligente de Patrones</h2>
+            <p>Ingresa un código para analizar automáticamente de qué formato se trata.</p>
+            <textarea id="detector-input" placeholder="Ingresa el texto a analizar (ej: .- -. --. . .- / 01000001 / 48 49)..."></textarea>
+            <button onclick="analyzePattern()">Analizar Patrón</button>
+            <div id="detector-results" class="results-container"></div>
+        </section>
+
+        <!-- SECCIÓN 3: VISUALIZADOR DE 25 DESPLAZAMIENTOS CÉSAR -->
+        <section id="caesar-shifts" class="tab-content">
+            <h2>Visualización de Desplazamientos César</h2>
+            <p>Ingresa un mensaje cifrado o en texto plano para ver sus 25 combinaciones posibles.</p>
+            <input type="text" id="caesar-all-input" placeholder="Escribe una palabra o texto...">
+            <button onclick="generateAllShifts()">Generar Desplazamientos</button>
+            <div id="caesar-shifts-results" class="shifts-grid"></div>
+        </section>
+
+        <!-- SECCIÓN 4: CATÁLOGO EDUCATIVO -->
+        <section id="catalog" class="tab-content">
+            <h2>Catálogo Educativo Criptográfico</h2>
+            <div id="catalog-container" class="catalog-grid"></div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

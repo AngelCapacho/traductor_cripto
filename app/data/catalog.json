@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Código Morse",
+    "category": "Codificación por Pulsos",
+    "history": "Desarrollado por Samuel Morse y Alfred Vail en la década de 1830 para la telegrafía eléctrica.",
+    "usage": "Utilizado históricamente en aviación, marina y telecomunicaciones de emergencia (señales SOS)."
+  },
+  {
+    "name": "Cifrado César",
+    "category": "Sustitución Monoalfabética",
+    "history": "Usado por Julio César para proteger mensajes de importancia militar desplazando el alfabeto 3 posiciones.",
+    "usage": "Uso educativo para entender los conceptos básicos de criptografía y criptoanálisis."
+  },
+  {
+    "name": "Código Binario",
+    "category": "Sistema Numérico (Base 2)",
+    "history": "Formalizado por Gottfried Leibniz en el siglo XVII y base fundamental de la computación moderna.",
+    "usage": "Representación interna de datos en procesadores, memoria y protocolos de red."
+  },
+  {
+    "name": "Sistema Hexadecimal",
+    "category": "Sistema Numérico (Base 16)",
+    "history": "Introducido en la informática para facilitar la lectura de grandes cadenas binarias por seres humanos.",
+    "usage": "Direccionamiento MAC, representación de colores HTML/CSS, volcado de memoria (Memory Dumps)."
+  },
+  {
+    "name": "Sustitución Simple",
+    "category": "Cifrado Clásico",
+    "history": "Una técnica antigua donde cada letra es reemplazada por otra según un alfabeto desordenado o clave fija.",
+    "usage": "Base teórica para entender cifrados polialfabéticos y vulnerabilidad al análisis de frecuencia."
+  }
+]

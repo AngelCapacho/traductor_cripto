@@ -1,0 +1,111 @@
+===============================================================================
+       BITACORA DE USO Y APLICACION DE INTELIGENCIA ARTIFICIAL (IA)
+===============================================================================
+
+PROYECTO: Banco y Traductor Criptografico Web
+ROL DEL DESARROLLADOR: Diseñador, Integrador y Validador de Sistema
+MODELOS DE IA UTILIZADOS: ChatGPT (Meta-prompting) y Gemini (Tutor Academico)
+METODOLOGIA: Desarrollo Guiado Paso a Paso (Step-by-Step Prompting)
+
+-------------------------------------------------------------------------------
+1. DECLARACION DE USO DE IA
+-------------------------------------------------------------------------------
+El desarrollo de esta plataforma web se apoyo en modelos de lenguaje de ultima 
+generacion (LLMs) como herramientas asistenciales para la arquitectura de 
+software, generacion de codigo modular, resolucion de errores (debugging) y 
+diseño de interfaz de usuario. La toma de decisiones tecnicas, ejecucion de 
+comandos, validacion en entorno local y personalizacion visual fueron 
+responsabilidad directa del desarrollador.
+
+-------------------------------------------------------------------------------
+2. REGISTRO DE INTERACCIONES Y FASES DEL PROYECTO
+-------------------------------------------------------------------------------
+
+FASE 0: Estrategia y Prompteo Inicial (Meta-Prompting)
+- Herramienta: ChatGPT
+- Prompt Utilizado:
+  "dame un promt para que gemini me ayude a realizar este proyecto apso a paso, 
+   si yo no anvanzo el tampoco, El proyecto seleccionado consiste en una 
+   plataforma web interactiva diseñada como un banco y traductor inteligente 
+   de sistemas de comunicacion no convencionales y cifrados clasicos..."
+- Objetivo: Generar la instruccion maestra (System Prompt) para condicionar a 
+  Gemini a actuar como un tutor tecnico estricto y secuencial.
+
+FASE 1: Configuracion del Entorno de Desarrollo (Etapa 1)
+- Herramienta: Gemini
+- Acciones:
+  * Creacion y aislamiento del entorno virtual en Python (venv).
+  * Instalacion de dependencias core (fastapi, uvicorn).
+  * Verificacion del servidor local en el puerto 8000 y confirmacion de la 
+    respuesta inicial JSON.
+
+FASE 2: Diseño de la Arquitectura Modular (Etapa 2)
+- Herramienta: Gemini
+- Acciones:
+  * Definicion del arbol de directorios dividiendo responsabilidades (app/ 
+    para backend y static/ para frontend).
+  * Explicacion conceptual de la utilidad de archivos __init__.py y diferencia 
+    entre archivos y carpetas.
+  * Diagnostico visual por captura de pantalla: Correccion de un error de 
+    anidacion donde la carpeta 'app' habia quedado dentro de 'venv', guiando su 
+    reubicacion a la raiz del proyecto.
+
+FASE 3: Desarrollo de la Logica del Backend en Python (Etapa 3)
+- Herramienta: Gemini
+- Acciones:
+  * Modulo Morse (app/ciphers/morse.py): Diccionarios y conversion 
+    bidireccional.
+  * Modulo Cesar (app/ciphers/caesar.py): Aritmetica modular (% 26) y 
+    generacion automatica de las 25 variaciones.
+  * Modulos Binario y Hexadecimal (app/ciphers/binary.py, hexadecimal.py): 
+    Conversion a bases 2 y 16 con formato de 8 bits y pares hexadecimales.
+  * Modulo Sustitucion Simple (app/ciphers/substitution.py): Uso de 
+    str.maketrans() y validacion de claves de 26 caracteres unicos.
+  * Motor Detector de Patrones (app/detector/detector.py): Evaluador 
+    sintactico por Expresiones Regulares (RegEx) que entrega respuestas 
+    multiples con niveles de confianza y explicaciones.
+  * Pruebas integradas de todos los endpoints via Swagger UI (/docs).
+
+FASE 4: Frontend y Rediseño de Interfaz Visual (Etapa 4)
+- Herramienta: Gemini
+- Acciones:
+  * Maquetacion HTML5 (static/index.html) con pestañas y contenedores dinamicos.
+  * Resolucion de problemas de almacenamiento en cache del navegador 
+    (Ctrl + F5).
+  * Rediseño estetico a solicitud del usuario: Reemplazo total del tema oscuro 
+    inicial por un diseño claro, limpio, corporativo y profesional 
+    (static/styles.css) adaptado a dispositivos moviles.
+
+FASE 5: Integracion del Cliente con Fetch API (Etapa 5)
+- Herramienta: Gemini
+- Acciones:
+  * Programacion de logica JavaScript (static/script.js) para peticiones 
+    asincronas POST hacia los endpoints de FastAPI.
+  * Control dinamico del DOM para mostrar u ocultar campos de parametros segun 
+    el cifrado seleccionado.
+  * Renderizado interactivo de tarjetas para el Detector de Patrones y la 
+    grid de los 25 Desplazamientos Cesar.
+  * Creacion del endpoint /api/catalog en main.py para solventar la restriccion 
+    de seguridad de lectura directa de archivos JSON desde el cliente, cargando 
+    exitosamente la pestaña del Catalogo Educativo.
+
+-------------------------------------------------------------------------------
+3. MATRIZ DE IMPACTO DE LA IA EN EL PROYECTO
+-------------------------------------------------------------------------------
+
+[Componente]                 [Nivel Asistencia]  [Descripcion Contribucion]
+- Arquitectura de Software:   Alta (80%)          Diseño modular en capas.
+- Computo / Algoritmos:       Alta (90%)          Formulas y RegEx de cifrado.
+- Interfaz de Usuario UI/UX:  Media-Alta (75%)    HTML/CSS e iteraciones de diseño.
+- Validacion y Debugging:     Compartida (50%)    Correccion de rutas y caches.
+- Control y Pruebas:          Baja (20%)          Ejecucion 100% por el usuario.
+
+-------------------------------------------------------------------------------
+4. CONCLUSION
+-------------------------------------------------------------------------------
+La colaboracion entre la IA y el estudiante permitio completar un ciclo 
+completo de desarrollo web criptografico de nivel profesional de forma 
+iterativa y limpia. El enfoque secuencial garantizo que cada componente fuera 
+comprendido, probado e integrado con exito antes de avanzar a la siguiente 
+fase del sistema.
+===============================================================================
